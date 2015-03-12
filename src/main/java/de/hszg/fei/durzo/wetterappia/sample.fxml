@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<SplitPane dividerPositions="0.2619311875693674" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.hszg.fei.durzo.wetterappia.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="487.0" prefWidth="212.0">
+         <children>
+            <VBox prefHeight="398.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="74.0" prefWidth="302.0">
+                     <children>
+                        <TextField fx:id="searchField" onAction="#searchButtonClicked" />
+                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonClicked" text="Suchen">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="25.0" />
+                     </padding>
+                  </HBox>
+                  <ListView fx:id="listView" prefHeight="425.0" prefWidth="229.0" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="487.0" prefWidth="658.0">
+         <children>
+            <Label fx:id="locationLabel" layoutX="34.0" layoutY="21.0" text="Görlitz (DE)">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="55.0" prefHeight="3.0" prefWidth="640.0" />
+            <Label layoutX="34.0" layoutY="70.0" text="6 - 11 Uhr">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="110.0" text="Temperatur min." />
+            <Label layoutX="34.0" layoutY="127.0" text="Temperatur max." />
+            <Label layoutX="34.0" layoutY="152.0" text="Windrichtung" />
+            <Label layoutX="34.0" layoutY="177.0" text="Niederschlagswarhscheinlichkeit" />
+            <Label layoutX="34.0" layoutY="202.0" text="Wetterzustand" />
+            <Label fx:id="tempMinSixLabel" layoutX="218.0" layoutY="110.0" text="25,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="tempMaxSixLabel" layoutX="218.0" layoutY="127.0" text="-6,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="windSixLabel" layoutX="218.0" layoutY="152.0" text="nord-west">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="downfallSixLabel" layoutX="218.0" layoutY="177.0" text="27%">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="stateSixLabel" layoutX="218.0" layoutY="202.0" text="wolkig">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Separator layoutX="14.0" layoutY="253.0" prefHeight="3.0" prefWidth="640.0" />
+            <Label layoutX="34.0" layoutY="270.0" text="11 - 17 Uhr">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="311.0" text="Temperatur min." />
+            <Label layoutX="34.0" layoutY="328.0" text="Temperatur max." />
+            <Label layoutX="34.0" layoutY="383.0" text="Niederschlagswarhscheinlichkeit" />
+            <Label layoutX="34.0" layoutY="353.0" text="Windrichtung" />
+            <Label layoutX="34.0" layoutY="409.0" text="Wetterzustand" />
+            <Label fx:id="tempMinElevenLabel" layoutX="218.0" layoutY="311.0" text="25,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="tempMaxElevenLabel" layoutX="218.0" layoutY="328.0" text="-6,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="windElevenLabel" layoutX="218.0" layoutY="353.0" text="nord-west">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="downfallElevenLabel" layoutX="218.0" layoutY="383.0" text="27%">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="stateElevenLabel" layoutX="218.0" layoutY="409.0" text="wolkig">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="357.0" layoutY="70.0" text="17 - 23 Uhr">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="357.0" layoutY="270.0" text="23 - 6 Uhr">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="536.0" layoutY="462.0" onAction="#openWetterCom" prefHeight="23.0" prefWidth="127.0" text="Powerd by wetter.com" />
+            <Label layoutX="359.0" layoutY="110.0" text="Temperatur min." />
+            <Label layoutX="359.0" layoutY="127.0" text="Temperatur max." />
+            <Label layoutX="359.0" layoutY="152.0" text="Windrichtung" />
+            <Label layoutX="359.0" layoutY="177.0" text="Niederschlagswarhscheinlichkeit" />
+            <Label layoutX="359.0" layoutY="202.0" text="Wetterzustand" />
+            <Label fx:id="downfallSeventeenLabel" layoutX="545.0" layoutY="177.0" text="27%">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="stateSeventeenLabel" layoutX="545.0" layoutY="202.0" text="wolkig">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="windSeventeenLabel" layoutX="545.0" layoutY="152.0" text="nord-west">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="tempMaxSeventeenLabel" layoutX="545.0" layoutY="127.0" text="-6,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="tempMinSeventeenLabel" layoutX="545.0" layoutY="110.0" text="25,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="359.0" layoutY="311.0" text="Temperatur min." />
+            <Label layoutX="359.0" layoutY="328.0" text="Temperatur max." />
+            <Label layoutX="359.0" layoutY="353.0" text="Windrichtung" />
+            <Label layoutX="359.0" layoutY="383.0" text="Niederschlagswarhscheinlichkeit" />
+            <Label layoutX="359.0" layoutY="409.0" text="Wetterzustand" />
+            <Label fx:id="tempMinTwentyThreeLabel" layoutX="545.0" layoutY="311.0" text="25,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="tempMaxTwentyThreeLabel" layoutX="545.0" layoutY="328.0" text="-6,0°C">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="windTwentyThreeLabel" layoutX="545.0" layoutY="353.0" text="nord-west">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="downfallTwentyThreeLabel" layoutX="545.0" layoutY="383.0" text="27%">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="stateTwentyThreeLabel" layoutX="545.0" layoutY="409.0" text="wolkig">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
